@@ -16,8 +16,12 @@
     <%= f.text_field :url %>
   </div>
   <div class="field">
-    <%= f.label :file_name %><br>
-    <%= f.text_field :file_name %>
+    <%= f.label :file %><br>
+    <%- if f.object.file_name -%>
+      <%= image_tag f.object.src %><br>
+      <%= f.object.file_name %><br>
+    <%- end -%>
+    <%= f.file_field :file %>
   </div>
   <div class="field">
     <%= f.label :active_from %><br>

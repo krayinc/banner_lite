@@ -2,12 +2,13 @@
 
 <p>
   <strong>Url:</strong>
-  <%= @banner.url %>
+  <%= link_to @banner.url, @banner.url %>
 </p>
 
 <p>
   <strong>File name:</strong>
-  <%= @banner.file_name %>
+  <%= @banner.file_name %><br>
+  <%= image_tag @banner.src %>
 </p>
 
 <p>

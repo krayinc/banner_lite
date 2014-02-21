@@ -47,7 +47,7 @@ module BannerLite
       end
 
       def banner_params
-        params.require(:banner).permit(:url, :file_name, :active_from, :active_until)
+        params.require(:banner).permit(:url, :file, :active_from, :active_until)
       end
   end
 end
