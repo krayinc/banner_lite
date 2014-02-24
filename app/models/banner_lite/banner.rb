@@ -6,6 +6,8 @@ module BannerLite
     after_save :save_file, if: :file
     after_destroy :remove_file
 
+    scope :active, ->{ now = Time.zone.now; where(arel_table[:active_from].lteq(now).and(arel_table[:active_until].gt(now))) }
+
     def src
       "/system/#{id}/#{file_name}"
     end

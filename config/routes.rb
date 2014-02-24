@@ -1,3 +1,7 @@
 BannerLite::Engine.routes.draw do
-  resources :banners
+  resources :banners do
+    collection do
+      get 'preview'
+    end
+  end
 end
