@@ -12,3 +12,5 @@ gemspec
 
 # To use debugger
 # gem 'debugger'
+
+gem 'jquery-rails'  # need this here or capybara fails to load jquery
