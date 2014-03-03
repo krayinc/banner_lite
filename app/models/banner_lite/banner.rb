@@ -28,7 +28,7 @@ module BannerLite
       end
 
       def save_file
-        FileUtils.mkdir(base_dir)
+        FileUtils.mkdir(base_dir) unless File.directory?(base_dir)
         File.open(base_dir + file_name, 'wb'){|f| f.write(file.read) }
       end
   end
