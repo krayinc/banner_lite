@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    banner_lite (0.0.1)
+    banner_lite (0.0.2)
       rails (~> 4.1.0.beta1)
 
 GEM
