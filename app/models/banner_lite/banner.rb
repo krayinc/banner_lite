@@ -1,8 +1,8 @@
 module BannerLite
   class Banner < ActiveRecord::Base
     attr_accessor :file
-    validates :url
-    validates :file, if: ->(b){ b.file_name.blank? }
+    validates :url, presence: true
+    validates :file, presence: true, if: ->(b){ b.file_name.blank? }
 
     before_save :fill_file_name, if: :file
     after_save :save_file, if: :file
