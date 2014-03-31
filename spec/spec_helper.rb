@@ -43,4 +43,8 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.include FactoryGirl::Syntax::Methods
+
+  config.after :each do
+    FileUtils.rm_rf Dir[Rails.root + 'public/system/*']
+  end
 end

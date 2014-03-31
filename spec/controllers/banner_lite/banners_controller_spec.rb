@@ -4,7 +4,10 @@ module BannerLite
   describe BannersController do
     routes { BannerLite::Engine.routes }
 
-    let(:valid_attributes) { { "url" => "MyString" } }
+    let(:valid_attributes) { {
+      "url" => "MyString",
+      "file" => Rack::Test::UploadedFile.new(File.expand_path('../../../fixtures/files/dummy.png', __FILE__), 'image/jpeg'),
+    } }
     let(:valid_session) { {} }
 
     describe "GET index" do
