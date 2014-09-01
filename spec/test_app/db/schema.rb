@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140221065958) do
+ActiveRecord::Schema.define(version: 20140901033338) do
 
   create_table "banner_lite_banners", force: true do |t|
     t.string   "url"
     t.string   "file_name"
     t.datetime "active_from"
     t.datetime "active_until"
+    t.string   "banner_text"
+    t.string   "type"
   end
 
 end
