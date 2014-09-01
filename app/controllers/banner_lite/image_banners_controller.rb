@@ -1,28 +1,28 @@
 require_dependency "banner_lite/application_controller"
 
 module BannerLite
-  class BannersController < ApplicationController
+  class ImageBannersController < ApplicationController
     before_action :set_banner, only: [:show, :edit, :update, :destroy]
 
     def index
-      @banners = Banner.all
+      @banners = ImageBanner.all
     end
 
     def show
     end
 
     def new
-      @banner = Banner.new
+      @banner = ImageBanner.new
     end
 
     def edit
     end
 
     def create
-      @banner = Banner.new(banner_params)
+      @banner = ImageBanner.new(banner_params)
 
       if @banner.save
-        redirect_to @banner, notice: 'Banner was successfully created.'
+        redirect_to @banner, notice: 'ImageBanner was successfully created.'
       else
         render action: 'new'
       end
@@ -30,7 +30,7 @@ module BannerLite
 
     def update
       if @banner.update(banner_params)
-        redirect_to @banner, notice: 'Banner was successfully updated.'
+        redirect_to @banner, notice: 'ImageBanner was successfully updated.'
       else
         render action: 'edit'
       end
@@ -38,16 +38,16 @@ module BannerLite
 
     def destroy
       @banner.destroy
-      redirect_to banners_url, notice: 'Banner was successfully destroyed.'
+      redirect_to image_banners_url, notice: 'ImageBanner was successfully destroyed.'
     end
 
     private
       def set_banner
-        @banner = Banner.find(params[:id])
+        @banner = ImageBanner.find(params[:id])
       end
 
       def banner_params
-        params.require(:banner).permit(:url, :file, :active_from, :active_until)
+        params.require(:image_banner).permit(:url, :file, :active_from, :active_until)
       end
   end
 end
