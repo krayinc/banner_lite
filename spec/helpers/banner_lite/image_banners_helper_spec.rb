@@ -1,6 +1,6 @@
 require 'spec_helper'
 
 module BannerLite
-  describe BannersHelper do
+  describe ImageBannersHelper do
   end
 end

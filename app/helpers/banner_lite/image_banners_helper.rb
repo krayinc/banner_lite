@@ -1,6 +1,6 @@
 module BannerLite
-  module BannersHelper
-    def banners(bnnrs = nil)
+  module ImageBannersHelper
+    def image_banners(bnnrs = nil)
       bnnrs ||= ImageBanner.active
       bnnrs.map{|b| banner_html(b) }.join("\n").html_safe
     end
