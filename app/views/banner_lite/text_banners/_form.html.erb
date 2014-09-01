@@ -1,0 +1,33 @@
+<%= form_for(@text_banner) do |f| %>
+  <% if @text_banner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@text_banner.errors.count, "error") %> prohibited this text_banner from being saved:</h2>
+
+      <ul>
+      <% @text_banner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :active_from %><br>
+    <%= f.datetime_select :active_from %>
+  </div>
+  <div class="field">
+    <%= f.label :active_until %><br>
+    <%= f.datetime_select :active_until %>
+  </div>
+  <div class="field">
+    <%= f.label :banner_text %><br>
+    <%= f.text_field :banner_text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

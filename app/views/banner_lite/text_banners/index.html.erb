@@ -1,0 +1,31 @@
+<h1>Listing text_banners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th>Active from</th>
+      <th>Active until</th>
+      <th>Banner text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @text_banners.each do |text_banner| %>
+      <tr>
+        <td><%= text_banner.url %></td>
+        <td><%= text_banner.active_from %></td>
+        <td><%= text_banner.active_until %></td>
+        <td><%= text_banner.banner_text %></td>
+        <td><%= link_to 'Show', text_banner %></td>
+        <td><%= link_to 'Edit', edit_text_banner_path(text_banner) %></td>
+        <td><%= link_to 'Destroy', text_banner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Text banner', new_text_banner_path %>
