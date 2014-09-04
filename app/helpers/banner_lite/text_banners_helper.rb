@@ -6,7 +6,7 @@ module BannerLite
     end
 
     def banner_html(banner)
-      link_to banner.banner_text, banner.url
+      link_to banner.text, banner.url
     end
   end
 end

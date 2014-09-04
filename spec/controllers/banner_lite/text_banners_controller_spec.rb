@@ -6,12 +6,12 @@ module BannerLite
 
     let(:valid_attributes) { {
       url:'http://www.google.co.jp',
-      banner_text: 'Visit our special site!',
+      text: 'Visit our special site!',
     } }
 
     let(:invalid_attributes) { {
       url: '',
-      banner_text: '',
+      text: '',
     } }
     let(:valid_session) { { } }
 

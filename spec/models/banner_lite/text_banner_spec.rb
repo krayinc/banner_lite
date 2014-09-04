@@ -6,7 +6,7 @@ module BannerLite
       it "should be invalid without banner_text" do
         banner = BannerLite::TextBanner.new({
           url: 'http://www.google.com',
-          banner_text: ''
+          text: ''
         })
         expect(banner).to be_invalid
       end

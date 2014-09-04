@@ -47,7 +47,7 @@ module BannerLite
       end
 
       def text_banner_params
-        params.require(:text_banner).permit(:url, :active_from, :active_until, :banner_text)
+        params.require(:text_banner).permit(:url, :active_from, :active_until, :text)
       end
   end
 end
