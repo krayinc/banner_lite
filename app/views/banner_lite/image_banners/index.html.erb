@@ -19,7 +19,7 @@
         <td><%= banner.active_from %></td>
         <td><%= banner.active_until %></td>
         <td><%= link_to 'Show', banner %></td>
-        <td><%= link_to 'Edit', edit_banner_path(banner) %></td>
+        <td><%= link_to 'Edit', edit_image_banner_path(banner) %></td>
         <td><%= link_to 'Destroy', banner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Banner', new_banner_path %>
+<%= link_to 'New Banner', new_image_banner_path %>

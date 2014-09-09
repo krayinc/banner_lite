@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @text_banner.url %>
+</p>
+
+<p>
+  <strong>Active from:</strong>
+  <%= @text_banner.active_from %>
+</p>
+
+<p>
+  <strong>Active until:</strong>
+  <%= @text_banner.active_until %>
+</p>
+
+<p>
+  <strong>Banner text:</strong>
+  <%= @text_banner.text %>
+</p>
+
+<%= link_to 'Edit', edit_text_banner_path(@text_banner) %> |
+<%= link_to 'Back', text_banners_path %>
